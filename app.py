@@ -1,10 +1,10 @@
 from flask import Flask, render_template, jsonify, request, redirect, url_for, flash, session
-from backend.lotto_routes import lotto_routes
-from backend.lotto_api import fetch_latest_draw_no, fetch_draw_data
-from backend.lotto_coupon import create_coupon, use_coupon, get_all_coupons, delete_coupon
-from datetime import datetime, timedelta
+from .backend.lotto_routes import lotto_routes
+from .backend.lotto_api import fetch_latest_draw_no, fetch_draw_data
+from .backend.lotto_coupon import create_coupon, use_coupon, get_all_coupons, delete_coupon
+from .datetime import datetime, timedelta
 from functools import lru_cache, wraps
-from backend.lotto_scraper import fetch_lotto_results
+from .backend.lotto_scraper import fetch_lotto_results
 import sqlite3
 import random
 import string
