@@ -154,6 +154,9 @@ def index():
         "index.html", latest_data=latest_data, lotto_results=lotto_results["results"]
     )
 
+def home():
+    return "Hello, Cloudtype!"
+
 @app.route("/admin/login", methods=["GET", "POST"])
 def admin_login():
     if session.get("logged_in"):
