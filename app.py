@@ -559,4 +559,4 @@ def debug_latest_draw():
 
 if __name__ == "__main__":
     initialize_database()  # 데이터베이스 초기화
-    app.run(host="0.0.0.0", port=5000)  # Flask 애플리케이션 실행
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))  # Flask 애플리케이션 실행
